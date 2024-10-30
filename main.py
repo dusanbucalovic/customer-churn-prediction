@@ -204,7 +204,7 @@ if selected_customer_option:
             "Credit Score",
             min_value=300,
             max_value=800,
-            value=int(selected_customer['CreditScore']))
+            value=min(max(300, int(selected_customer['CreditScore'])), 800))
 
         location = st.selectbox(
             "Location", ["Spain", "France", "Germany"],
